@@ -55,7 +55,7 @@ const ChatModal: React.FC<Props> = ({ isOpen, onClose }) => {
     setMessages(prev => [...prev, loadingMsg]);
 
     try {
-      const res = await fetch("http://localhost:5000/api/chat", {
+      const res = await fetch("https://adarahbackend.onrender.com/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: messageToSend })
@@ -79,7 +79,7 @@ const ChatModal: React.FC<Props> = ({ isOpen, onClose }) => {
 
   const sendFeedback = async (helpful: boolean, response: any, extra?: string) => {
     try {
-      await fetch("http://localhost:5000/api/feedback", {
+      await fetch("https://adarahbackend.onrender.com/api/feedback", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ response, helpful, extra })
