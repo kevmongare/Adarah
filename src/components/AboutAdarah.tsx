@@ -3,7 +3,7 @@ import { Heart, Globe, Baby, ShieldCheck } from "lucide-react";
 
 export default function AboutAdarah() {
   return (
-    <section className="bg-gradient-to-b from-pink-50 via-white to-white py-24 px-6 md:px-12">
+    <section id="AboutAdarah" className="bg-gradient-to-b from-pink-50 via-white to-white py-24 px-6 md:px-12 scroll-mt-24">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
@@ -16,14 +16,14 @@ export default function AboutAdarah() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
             Why <span className="text-pink-600">Adarah</span> Exists
           </h2>
-          <p className="text-gray-600 mt-4 max-w-3xl mx-auto">
+          <p className="text-gray-600 mt-4 max-w-3xl mx-auto font-light">
             A father’s realization. A continent’s challenge.
             A mission to ensure no parent walks the pregnancy journey uninformed.
           </p>
         </motion.div>
 
         {/* Story Card */}
-        <div className="bg-white shadow-xl rounded-3xl p-10 md:p-14 mb-20 border border-pink-100">
+        <div className="bg-white shadow-md rounded-xl p-10 md:p-14 mb-20 ">
           <p className="text-gray-700 leading-relaxed mb-6">
             As I prepared to welcome my first child, I discovered how overwhelming
             maternal information can be. Clear, trusted guidance was scattered.
@@ -87,10 +87,10 @@ function StatCard({
   text: string;
 }) {
   return (
-    <div className="bg-white rounded-2xl p-8 shadow-lg border border-pink-100 hover:shadow-xl transition">
+    <div className="bg-white  rounded-2xl p-8 shadow-lg border border-pink-100 hover:shadow-xl transition">
       <div className="mb-4">{icon}</div>
       <h4 className="text-2xl font-bold text-gray-900 mb-3">{number}</h4>
-      <p className="text-gray-600">{text}</p>
+      <p className="text-gray-600 font-extralight">{text}</p>
     </div>
   );
 }

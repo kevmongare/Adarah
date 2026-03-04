@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ChatModal from "./components/ChatModal";
 import AboutAdarah from "./components/AboutAdarah";
-import ContactAdarah from "./components/ContactAdarah";
+// import ContactAdarah from "./components/ContactAdarah";
 import Footer from "./components/Footer";
 // import FloatingChatButton from "./components/FloatingChatButton";
 
@@ -21,7 +21,7 @@ function App() {
 
         <AboutAdarah />
 
-        <ContactAdarah />
+        {/* <ContactAdarah /> */}
 
         <Footer />
 

@@ -1,12 +1,15 @@
 import { Heart } from "lucide-react";
+import Logo from '/AdarahLogo.png'
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-black via-pink-900 to-black text-gray-400 pt-16 pb-8 px-6 md:px-12">
+    <footer className="bg-linear-180 from-pink-200 to-white text-gray-900 pt-16 pb-8 px-6 md:px-12">
+      
       <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-10">
 
         <div>
-          <h3 className="text-white text-2xl font-bold mb-4">
+          <h3 className="text-black text-2xl font-bold mb-4">
+            <span><img src={Logo} alt="" className="h-30"/></span>
             Adarah
           </h3>
           <p>
@@ -42,7 +45,7 @@ function FooterColumn({
 }) {
   return (
     <div>
-      <h4 className="text-white font-semibold mb-4">{title}</h4>
+      <h4 className="text-black font-semibold mb-4">{title}</h4>
       <ul className="space-y-2">
         {links.map((link, i) => (
           <li key={i} className="hover:text-pink-500 cursor-pointer transition">

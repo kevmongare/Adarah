@@ -11,19 +11,21 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-t from-black via-pink-800 to-pink-700 backdrop-blur-md shadow-md transition-all duration-300">
-      
+
       {/* Desktop Layout */}
       <div className="hidden md:flex items-center justify-center px-6 py-4 max-w-7xl mx-auto">
-        
+
         {/* Left Menu */}
         <ul className="flex space-x-8">
           {leftMenu.map((item, index) => (
-            <li
-              key={index}
-              className="text-gray-100 font-medium hover:text-pink-500 transition duration-300 cursor-pointer relative"
-            >
-              {item}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink-400 transition-all duration-300 hover:w-full"></span>
+            <li key={index} className="relative group">
+              <a
+                href={item.link}
+                className="text-gray-100 font-medium hover:text-pink-500 transition duration-300 cursor-pointer"
+              >
+                {item.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink-400 transition-all duration-300 group-hover:w-full"></span>
+              </a>
             </li>
           ))}
         </ul>
@@ -40,12 +42,14 @@ export default function Navbar() {
         {/* Right Menu */}
         <ul className="flex space-x-8">
           {rightMenu.map((item, index) => (
-            <li
-              key={index}
-              className="text-gray-100 font-medium hover:text-pink-500 transition duration-300 cursor-pointer relative"
-            >
-              {item}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink-400 transition-all duration-300 hover:w-full"></span>
+            <li key={index} className="relative group">
+              <a
+                href={item.link}
+                className="text-gray-100 font-medium hover:text-pink-500 transition duration-300 cursor-pointer"
+              >
+                {item.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink-400 transition-all duration-300 group-hover:w-full"></span>
+              </a>
             </li>
           ))}
         </ul>
@@ -69,14 +73,16 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-md shadow-lg px-6 py-4 space-y-4 text-center rounded-b-lg">
+        <div className="md:hidden bg-white/95 backdrop-blur-md shadow-lg px-6 py-4 space-y-4">
           {Menu.map((item, index) => (
-            <div
+            <a
               key={index}
-              className="text-gray-800 text-lg font-medium hover:text-pink-500 transition duration-300 cursor-pointer"
+              href={item.link}
+              onClick={() => setIsOpen(false)} // Closes menu after clicking
+              className="block text-gray-800 text-lg font-medium hover:text-pink-500 transition duration-300"
             >
-              {item}
-            </div>
+              {item.name}
+            </a>
           ))}
         </div>
       )}

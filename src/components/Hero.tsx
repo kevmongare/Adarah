@@ -7,7 +7,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onOpenChat }) => {
   return (
-    <section className="relative bg-white min-h-screen flex items-center overflow-hidden">
+    <section className="relative bg-white h-[90vh] flex items-center overflow-hidden">
       {/* Floating shapes */}
       {/* <div className="absolute -top-20 -left-20 w-72 h-72 bg-pink-200 rounded-full opacity-30 animate-pulse"></div>
       <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-pink-300 rounded-full opacity-20 animate-pulse"></div> */}
@@ -39,7 +39,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenChat }) => {
             </div>
           </div>
 
-          <div className="mt-10">
+          <div id="talk" className="mt-10">
             <button
               onClick={onOpenChat}
               className="bg-gradient-to-r from-pink-600 to-pink-800 text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300"
@@ -51,7 +51,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenChat }) => {
 
         {/* Right image */}
         <div className="relative">
-          <div className="rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
+          <div className=" overflow-hidden  shadow-2xl  transform hover:scale-105 transition-transform duration-500">
             <img
               src="/AdarahCare.png"
               className="w-full h-auto object-cover"

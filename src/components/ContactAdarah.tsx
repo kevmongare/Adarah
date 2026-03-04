@@ -27,14 +27,14 @@ export default function ContactAdarah() {
   };
 
   return (
-    <section className="bg-gradient-to-b from-black via-pink-800 to-white py-24 px-6 md:px-12">
+    <section id="contactus" className="scroll-mt-24 bg-gradient-to-b from-black/10 via-pink-100 to-white py-24 px-6 md:px-12">
       <div className="max-w-6xl mx-auto">
 
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-100">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
             Contact <span className="text-pink-600">Adarah</span>
           </h2>
-          <p className="text-gray-100 mt-4">
+          <p className="text-gray-800 mt-4">
             We're here to support you.
           </p>
         </div>
