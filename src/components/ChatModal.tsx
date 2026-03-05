@@ -122,9 +122,8 @@ const ChatModal: React.FC<Props> = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div  className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
-      <div className="bg-white w-[400px] max-w-[90%] h-[600px] rounded-2xl flex flex-col shadow-xl overflow-hidden">
-
+    <div className="fixed inset-0 bg-black/40 flex items-end justify-center md:justify-end md:items-end z-50 p-4">
+    <div className="bg-white w-full max-w-[420px] h-[600px] rounded-2xl flex flex-col shadow-xl overflow-hidden">
         <div className="p-4 border-b flex justify-between items-center bg-gradient-to-r from-pink-500 to-pink-700 text-white">
           <h2 className="font-bold text-lg flex items-center space-x-4">
             Chat with Adarah
