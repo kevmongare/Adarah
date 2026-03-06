@@ -7,12 +7,12 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onOpenChat }) => {
   return (
-    <section className="relative bg-white h-[90vh] flex items-center overflow-hidden">
+    <section className="relative bg-white h-screen md-h-[90vh] flex items-center overflow-hidden ">
       {/* Floating shapes */}
       {/* <div className="absolute -top-20 -left-20 w-72 h-72 bg-pink-200 rounded-full opacity-30 animate-pulse"></div>
       <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-pink-300 rounded-full opacity-20 animate-pulse"></div> */}
 
-      <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center z-10">
+      <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center z-10 ">
 
         {/* Left content */}
         <div>
